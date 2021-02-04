@@ -35,7 +35,7 @@ export class VideoService {
       '../../..',
       'resources',
       'images',
-      `${id}.jpg`,
+      `cat-${id}.jpg`,
     );
 
     return new Promise((resolve, reject) => {
