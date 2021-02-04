@@ -11,15 +11,48 @@ export class VideoService {
 
     return new Promise((resolve, reject) => {
       this.retrieveFile(resolve, reject);
+    }).then((data: string) => {
+      const videos = JSON.parse(data);
+
+      const videosWithThumbnails = videos.map((video) => {
+        if (video.thumbnail) {
+          return {
+            ...video,
+            thumbnail: this.getThumbnail(video.thumbnail),
+          };
+        }
+
+        return { ...video };
+      });
+
+      return JSON.stringify(videosWithThumbnails);
     });
   }
 
   public getVideo(id: number): Promise<any> {
-    this.pathToFile = path.join(__dirname, `${id}.jpg`);
+    this.pathToFile = path.join(
+      __dirname,
+      '../../..',
+      'resources',
+      'images',
+      `${id}.jpg`,
+    );
 
     return new Promise((resolve, reject) => {
       this.retrieveFile(resolve, reject);
     });
+  }
+
+  private getThumbnail(id: string) {
+    this.pathToFile = path.join(
+      __dirname,
+      '../../..',
+      'resources',
+      'images',
+      `${id}.jpg`,
+    );
+
+    return fs.readFileSync(this.pathToFile);
   }
 
   private retrieveFile(resolve, reject) {

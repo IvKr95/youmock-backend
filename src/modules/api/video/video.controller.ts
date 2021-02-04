@@ -16,7 +16,7 @@ export class VideoController {
   @Get('/:id')
   getVideo(
     @Param('id', ParseIntPipe) id: number,
-    @Res({ passthrough: true }) res: Response,
+    @Res() res: Response,
   ): Promise<any> {
     return this.videoService
       .getVideo(id)
@@ -29,7 +29,7 @@ export class VideoController {
   }
 
   @Get()
-  getVideos(@Res({ passthrough: true }) res: Response): Promise<any> {
+  getVideos(@Res() res: Response): Promise<any> {
     return this.videoService
       .getVideos()
       .then((data) => {

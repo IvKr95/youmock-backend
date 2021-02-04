@@ -1,38 +1,44 @@
-{
-  "1": {
+[
+  {
+    "id": 1,
     "name": "Video 1",
     "duration": 1000,
     "tags": ["cat", "funny", "joy"],
-    "thumbnail": "./1.jpg"
+    "thumbnail": "cat-1"
   },
-  "2": {
+  {
+    "id": 2,
     "name": "Video 2",
     "duration": 2000,
     "tags": ["horror", "violence", "banned"],
-    "thumbnail": "./1.jpg"
+    "thumbnail": "cat-2"
   },
-  "3": {
-    "name": "Video 3",
+   {
+     "id": 3,
+     "name": "Video 3",
     "duration": 3000,
-    "tags": ["cat", "funny", "joy"],
-    "thumbnail": "./1.jpg"
+    "tags": ["cat", "joy"],
+    "thumbnail": "cat-2"
   },
-  "4": {
+  {
+    "id": 4,
     "name": "Video 4",
     "duration": 4000,
-    "tags": ["cat", "horror", "joy"],
-    "thumbnail": "./1.jpg"
+    "tags": ["cat", "horror"],
+    "thumbnail": "cat-2"
   },
-  "5": {
+   {
+     "id": 5,
     "name": "Video 5",
     "duration": 5000,
     "tags": ["cat", "funny", "joy"],
-    "thumbnail": "./1.jpg"
+    "thumbnail": "cat-2"
   },
-  "6": {
+  {
+    "id": 6,
     "name": "Video 6",
     "duration": 6000,
-    "tags": ["violence", "funny", "joy"],
-    "thumbnail": "./1.jpg"
+    "tags": ["violence", "funny"],
+    "thumbnail": "cat-2"
   }
-}
+]
