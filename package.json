@@ -5,6 +5,7 @@
   "author": "",
   "private": true,
   "license": "UNLICENSED",
+  "homepage": "https://github.com/IvKr95/youmock-backend",
   "engines": {
     "node": "12.18.4"
   },
